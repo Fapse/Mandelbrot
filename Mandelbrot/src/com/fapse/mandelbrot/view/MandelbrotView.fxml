@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackPane" prefHeight="600.0" prefWidth="800.0" styleClass="backgroundStackPane" stylesheets="@MandelbrotStyle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fapse.mandelbrot.view.MandelbrotController">
+   <children>
+      <Pane>
+         <children>
+            <ImageView fx:id="iv" preserveRatio="true" />
+         </children>
+      </Pane>
+      <BorderPane>
+         <bottom>
+            <HBox fx:id="hBox" alignment="CENTER" onMouseEntered="#handleMouseEnteredHBox" onMouseExited="#handleMouseExitedHBox" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleMoveLeft" prefHeight="35.0" prefWidth="35.0" text="←" />
+                  <Button mnemonicParsing="false" onAction="#handleMoveUp" prefHeight="35.0" prefWidth="35.0" text="↑" />
+                  <Button mnemonicParsing="false" onAction="#handleMoveDown" prefHeight="35.0" prefWidth="35.0" text="↓" />
+                  <Button mnemonicParsing="false" onAction="#handleMoveRight" prefHeight="35.0" prefWidth="35.0" text="→" />
+                  <Button mnemonicParsing="false" onAction="#handleZoomIn" prefHeight="35.0" prefWidth="35.0" text="+" />
+                  <Button mnemonicParsing="false" onAction="#handleZoomOut" prefHeight="35.0" prefWidth="35.0" text="–" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>
